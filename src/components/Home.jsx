@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import {
   HiGlobe,
-  HiHeart,
   HiOutlineHeart,
   HiSearch,
   HiStar,
@@ -83,7 +82,7 @@ export default function Home() {
               </button>
               <p>Type: {type}</p> <p>Time: {time} years ago</p>
             </span>
-            <HiHeart className="text-2xl" />
+            <HiOutlineHeart className="text-2xl" />
           </span>
           <div className="md:pl-24">
             <p className="text-2xl font-semibold md:mt-0 mt-4">{title}</p>
