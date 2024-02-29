@@ -222,9 +222,8 @@ export default function Home() {
   return (
     <main className="bg-[#fafbfc] pt-24">
       <section className="flex flex-col items-center justify-center min-h-[60vh] py-16 px-6">
-        <h1 className="xl:text-7xl lg:text-5xl text-3xl xl:leading-normal lg:leading-normal font-bold text-center">
-          Find your <span className="bg-primary text-white">dream jobs</span> in{" "}
-          <br />
+        <h1 className="xl:text-7xl lg:text-5xl text-3xl xl:leading-normal lg:leading-normal font-bold text-center lg:w-4/5">
+          Find your <span className="bg-primary text-white">dream jobs</span> in
           New Castle
         </h1>
         <p className="text-2xl lg:w-1/2 text-center leading-10 my-8">
