@@ -21,8 +21,30 @@ import { PiPaintBrushThin } from "react-icons/pi";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { HiPencilSquare } from "react-icons/hi2";
 import { TiWaves } from "react-icons/ti";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 /* eslint-disable react/no-unescaped-entities */
+
+const responsive = {
+  superLargeDesktop: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 3,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  module: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
+
 export default function Home() {
   const Categories = ({ icon, title, opening }) => {
     return (
@@ -99,7 +121,7 @@ export default function Home() {
 
   const Jobs = ({ type, img, title, color, bg_color }) => {
     return (
-      <div className="shadow">
+      <div className="shadow lg:w-[95%] mt-12">
         <div className="bg-white rounded-t-md px-6 py-8 flex flex-col items-center">
           <span className="flex items-center justify-between w-full">
             <button
@@ -343,36 +365,54 @@ export default function Home() {
           <p className="text-2xl mt-4 font-light">
             Know your worth and find the job that qualify your life
           </p>
-          <div className="mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-            <Jobs
-              bg_color="#f4f4ff"
-              color="#4b4efc"
-              img="/google.png"
-              title="Product Design"
-              type="Internship"
-            />
-            <Jobs
-              bg_color="#fffbf2"
-              color="#fec220"
-              img="/pinterest.jpeg"
-              title="Product Mockup"
-              type="Internship"
-            />
-            <Jobs
-              bg_color="#fbf2f6"
-              color="#c72b66"
-              img="/spotify.png"
-              title="Web Maintenance"
-              type="Full Time"
-            />
-            <Jobs
-              bg_color="#e8f3ea"
-              color="#349c30"
-              img="/dribble.png"
-              title="PHP Developer"
-              type="Remote"
-            />
+          {/* <div className="mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8"> */}
+          <div>
+            <Carousel
+              swipeable={true}
+              draggable={false}
+              responsive={responsive}
+              ssr={true} // means to render carousel on server-side.
+              infinite
+              showDots
+              autoPlay={true}
+              // autoPlaySpeed={2000}
+              arrows={true}
+              keyBoardControl={true}
+              customTransition="all .5"
+              transitionDuration={500}
+            >
+              <Jobs
+                bg_color="#f4f4ff"
+                color="#4b4efc"
+                img="/google.png"
+                title="Product Design"
+                type="Internship"
+              />
+              <Jobs
+                bg_color="#fffbf2"
+                color="#fec220"
+                img="/pinterest.jpeg"
+                title="Product Mockup"
+                type="Internship"
+              />
+              <Jobs
+                bg_color="#fbf2f6"
+                color="#c72b66"
+                img="/spotify.png"
+                title="Web Maintenance"
+                type="Full Time"
+              />
+              <Jobs
+                bg_color="#e8f3ea"
+                color="#349c30"
+                img="/dribble.png"
+                title="PHP Developer"
+                type="Remote"
+              />
+            </Carousel>
           </div>
+
+          {/* </div> */}
         </div>
       </section>
       <section className="bg-[#fcfaf6]">

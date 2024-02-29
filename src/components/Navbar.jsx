@@ -109,7 +109,7 @@ export default function Navbar() {
                 <button className="rounded-full bg-[#f3f3f4] text-lg text-black border-none font-bold px-8 py-3 hoverBtn">
                   Sign Up
                 </button>
-                <button className="rounded-full bg-primary text-lg text-white font-bold px-8 py-3 hoverBtn">
+                <button className="rounded-full bg-primary text-lg text-white border-none font-bold px-8 py-3 hoverBtn">
                   Sign In
                 </button>
               </div>
