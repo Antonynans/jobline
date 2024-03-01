@@ -1,10 +1,5 @@
 /* eslint-disable react/prop-types */
-import {
-  HiGlobe,
-  HiOutlineHeart,
-  HiSearch,
-  HiStar,
-} from "react-icons/hi";
+import { HiGlobe, HiOutlineHeart, HiSearch, HiStar } from "react-icons/hi";
 import { MdImportContacts } from "react-icons/md";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
@@ -168,10 +163,10 @@ export default function Home() {
     bg2,
   }) => {
     return (
-      <div className="bg-white rounded-[10px] px-6 py-8 flex flex-col justify-center gap-12 shadow">
+      <div className="bg-white rounded-[10px] px-6 py-8 flex flex-col justify-center gap-12 shadow transition-shadow hover:bg-light">
         <div className="flex items-center gap-x-4">
           <button
-            className="p-5 rounded-full bg-[#f4fefe] border-none outline-none text-4xl"
+            className="p-2 rounded-full bg-[#f4fefe] border-none outline-none text-4xl"
             style={{ background: `${bg1}`, color: `${color}` }}
           >
             {icon1}
@@ -221,8 +216,12 @@ export default function Home() {
   return (
     <main className="bg-[#fafbfc] pt-24">
       <section className="flex flex-col items-center justify-center min-h-[60vh] py-16 px-6">
-        <h1 className="xl:text-7xl lg:text-5xl text-3xl xl:leading-normal lg:leading-normal font-bold text-center lg:w-4/5">
-          Find your <span className="bg-primary text-white">dream jobs</span> in
+        <h1 className="xl:text-7xl lg:text-5xl sm:text-3xl text-2xl xl:leading-normal lg:leading-normal font-bold text-center">
+          Find your{" "}
+          <span className="bg-primary text-white whitespace-pre">
+            dream jobs
+          </span>{" "}
+          in <br />
           New Castle
         </h1>
         <p className="text-2xl lg:w-1/2 text-center leading-10 my-8">
@@ -432,7 +431,7 @@ export default function Home() {
               bg2="black"
               color="#1ae4e8"
               company="Gramware"
-              icon1={<BiChart />}
+              icon1={<BiChart size={40} />}
               icon2={<HiPencilSquare size={30} />}
               location="San Diego, CA"
               position="Financial Analyst"
@@ -444,7 +443,7 @@ export default function Home() {
               bg2="#457b9d"
               color="#25ef75"
               company="Syspresoft"
-              icon1={<PiPaintBrushThin />}
+              icon1={<PiPaintBrushThin size={40} />}
               icon2={<GiHamburger size={30} />}
               location="San Diego, CA"
               position="Web Developer"
@@ -456,7 +455,7 @@ export default function Home() {
               bg2="#e76f51"
               color="#d9b833"
               company="DataRes"
-              icon1={<GrAnnounce />}
+              icon1={<GrAnnounce size={40} />}
               icon2={<MdImportContacts size={30} />}
               location="San Diego, CA"
               position="Team Leader"
@@ -468,7 +467,7 @@ export default function Home() {
               bg2="#f4a261"
               color="#5eb9d7"
               company="Craftgenics"
-              icon1={<IoPersonCircleSharp />}
+              icon1={<IoPersonCircleSharp size={40} />}
               icon2={<TbWhirl size={30} />}
               location="Los Angeles"
               position="Coordinator"
@@ -481,7 +480,7 @@ export default function Home() {
               bg2="#457b9d"
               color="#ff8c48"
               company="Syspresoft"
-              icon1={<FaHeartPulse />}
+              icon1={<FaHeartPulse size={40} />}
               icon2={<GiHamburger size={30} />}
               location="San Diego, CA"
               position="Coordinator"
@@ -493,7 +492,7 @@ export default function Home() {
               bg2="#f4a261"
               color="#ff843d"
               company="Gramware"
-              icon1={<FaCalculator />}
+              icon1={<FaCalculator size={40} />}
               icon2={<TbWhirl size={30} />}
               location="Los Angeles"
               position="Senior Editor"
@@ -505,7 +504,7 @@ export default function Home() {
               bg2="#4895ef"
               color="#69bfd9"
               company="DataRes"
-              icon1={<IoPersonCircleSharp />}
+              icon1={<IoPersonCircleSharp size={40} />}
               icon2={<HiPencilSquare size={30} />}
               location="San Diego, CA"
               position="Support Engineer"
@@ -517,7 +516,7 @@ export default function Home() {
               bg2="#e76f51"
               color="#4b4efc"
               company="Gramware"
-              icon1={<GoLaw />}
+              icon1={<GoLaw size={40} />}
               icon2={<TiWaves size={30} />}
               location="Los Angeles"
               position="Web Developer"
